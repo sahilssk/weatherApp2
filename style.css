@@ -1,0 +1,306 @@
+*{
+
+
+    font-family: "Montserrat", serif;
+}
+
+body {
+    font-family: sans-serif;
+    color:  #FEFAE0;
+    background: linear-gradient(90deg,#08115a, #007081,#10b285,#3dd46d);
+    background-size: 400% 400%; 
+    animation: gradientAnimation 5s ease infinite; 
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%; /* Start from left */
+    }
+    50% {
+      background-position: 100% 50%; /* Move to the right */
+    }
+    100% {
+      background-position: 0% 50%; /* Return to the left */
+    }
+  }
+
+  h1{
+    font-size: 35px;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    
+  }
+  h2{
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  }
+      
+  /*input {
+    background: linear-gradient(90deg,#7c00ff,#0df0df);
+    background-size: 400% 400%; 
+    animation: gradientAnimation 5s ease infinite; 
+    color: white;
+    width: 50%;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 60px;
+    border-style: hidden;
+    text-align: center;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 100% 0; 
+    }
+    50% {
+      background-position: 0 0 ; 
+    }
+    100% {
+      background-position: 100% 0; 
+    }
+  }
+  */
+
+  input{
+    color:  #FEFAE0;
+    width: 50%;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 50px;
+    border-style: hidden;
+    text-align: center;
+    background-color: #08115a;
+    position: absolute;
+    left: 350px;
+    top: 200px;
+   
+
+  }
+
+
+  input:hover{
+    background-color: 	#08115a;
+    transform: scale(1.05);
+    transition: 1s ease;
+    
+  }
+ 
+
+  input::placeholder{
+    color:  #FEFAE0;
+    font-family: sans-serif;
+    font-size: 30px;
+    opacity: 80%;
+  }
+  input:hover::placeholder{
+    color: #08115a;
+    transition: 1s linear;
+
+  }
+  input:focus{
+    outline: none;
+  }
+
+  .btn{
+    
+    
+    border: none;
+    outline: none;
+    color: #FEFAE0;
+    z-index: 0;
+    height: 70px;
+    width: 220px;
+    position: absolute;
+    border-radius: 30px;
+    font-size: 30px;
+    top: 300px;
+    left: 480px;
+    border-style:none;
+
+
+  }
+
+  .btn::after{
+    
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 60px;
+    width: 200px;
+    background-color:;
+    left: 9px;
+    top: 5px;
+    border-radius: 30px;
+
+
+  }
+  .btn::before{
+    content: "";
+    background: linear-gradient(45deg, #FF0000, #FCED22);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 30px;
+    opacity: 1;
+  }
+
+  @keyframes glowing{
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+  }
+
+  .btn:hover::before{
+    opacity: 1;
+  }
+
+  .btn:active::after{
+    background: transparent;
+    
+  }
+
+  .btn:active{
+    color: #FEFAE0;
+   font-size: 32px;
+    background: linear-gradient(45deg, #FF0000, #FCED22);
+  }
+
+ /* button:hover{
+    background-color: #08115a;
+    transition: 0.5s linear;
+    cursor: pointer;
+    
+  }
+  
+  button:active {
+    background-color: #08115a ;
+    opacity: 0%;
+    cursor: pointer;
+
+  }*/
+
+  .weather{
+    text-align: center;
+    position: absolute;
+    top: 400px;
+    left: 100px;
+  }
+  
+  img{
+    height: 250px;
+  }
+  .info{
+    position: absolute;
+   height: 200px;
+   top: 200px;
+   text-align: center;
+   left: 55px;
+  }
+
+  .humidity{
+    text-align: center;
+    position: absolute;
+    top: 428px;
+    left:590px;
+  }
+  .humiimg{
+    height: 200px;
+  }
+
+  .info2{
+    position: absolute;
+   height: 200px;
+   top: 170px;
+   text-align: center;
+   left: 65px;
+  }
+  .container{
+    display: flex;
+    gap: 100px;
+   
+  }
+  .windimg{
+    height: 220px;
+  }
+  .wind{
+    text-align: center;
+    position: absolute;
+    top: 428px;
+    left:1100px;
+  }
+
+  .windinfo{
+    position: absolute;
+   height: 200px;
+   top: 170px;
+   text-align: center;
+   left: 30px;
+  }
+  .error{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 40px;
+    margin-top: 10px;
+    position: absolute;
+    left: 160px;
+    display: none;
+    top: 60px;
+    font-weight: bold;
+    text-align: center;
+   
+
+  }
+
+
+  .btn2{
+    color: #FEFAE0;
+    height: 70px;
+    width: 220px;
+    border: none;
+    outline: none;
+    z-index: 0;
+    position: absolute;
+    border-radius: 30px;
+    font-size: 30px;
+    top: 300px;
+    left: 730px;
+    border-style:none;
+    font-size: 30px;
+    
+  }
+  .btn2::after{
+    
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 60px;
+    width: 200px;
+    background-color:;
+    left: 9px;
+    top: 5px;
+    border-radius: 30px;
+
+
+  }
+  .btn2::before{
+    content: "";
+    background: linear-gradient(45deg, #FF0000, #FCED22);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 30px;
+    opacity: 1;
+  }
+
